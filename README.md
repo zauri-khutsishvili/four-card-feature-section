@@ -4,7 +4,7 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 ## Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/social-proof-section-nggIlOC6xk](https://www.frontendmentor.io/solutions/social-proof-section-nggIlOC6xk)
+- Solution URL: [https://www.frontendmentor.io/solutions/four-card-feature-section-pExwbOLdkA](https://www.frontendmentor.io/solutions/four-card-feature-section-pExwbOLdkA)
 - Live Site URL: [https://zauri-khutsishvili.github.io/four-card-feature-section/](https://zauri-khutsishvili.github.io/four-card-feature-section/)
 
 ## Built with

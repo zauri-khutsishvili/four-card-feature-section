@@ -18,6 +18,6 @@ body {
     font-family: 'Poppins', sans-serif;
 
     @include a.breakpoint(desktop) {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
     }
 }

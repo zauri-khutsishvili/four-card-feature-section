@@ -1,0 +1,23 @@
+@use '../abstracts' as a;
+
+body {
+    margin: 8.4rem calc(32 / 375 * 100%) 5.4rem;
+    background-color: var(--very-light-gray);
+
+    @include a.breakpoint(desktop) {
+            height: 100vh;
+            margin: 0 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    }
+}
+
+.four-card-feature-section-container {
+    max-width: 111rem;
+    font-family: 'Poppins', sans-serif;
+
+    @include a.breakpoint(desktop) {
+        margin-top: -0.1rem;
+    }
+}

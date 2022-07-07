@@ -1,0 +1,43 @@
+@use "../abstracts" as a;
+
+.four-cards-header {
+    text-align: center;
+    color: var(--very-dark-blue);
+    margin-bottom: 7.5rem;
+
+    &__title1 {
+        font-size: 2.4rem;
+        font-weight: 200;
+        letter-spacing: .006em;
+        margin-bottom: .2rem;
+    }
+
+    &__title2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        letter-spacing: .006em;
+        margin-bottom: 1.6rem;
+    }
+
+    &__description {
+        font-size: 1.5rem;
+        letter-spacing: 0.005em;
+        line-height: 1.667em;
+        opacity: .5;
+    }
+
+    @include a.breakpoint(desktop) {
+        max-width: 54rem;
+        margin: 0 auto 6.3rem;
+
+        &__title1 {
+            font-size: 3.6rem;
+            margin-bottom: -0.4rem;
+        }
+
+        &__title2 {
+            font-size: 3.6rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+}

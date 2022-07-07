@@ -1,0 +1,223 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  margin: 8.4rem 8.5333333333% 5.4rem;
+  background-color: var(--very-light-gray);
+}
+@media (min-width: 55em) {
+  body {
+    height: 100vh;
+    margin: 0 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.four-card-feature-section-container {
+  max-width: 111rem;
+  font-family: "Poppins", sans-serif;
+}
+@media (min-width: 55em) {
+  .four-card-feature-section-container {
+    margin-top: -0.1rem;
+  }
+}
+
+.four-cards-header {
+  text-align: center;
+  color: var(--very-dark-blue);
+  margin-bottom: 7.5rem;
+}
+.four-cards-header__title1 {
+  font-size: 2.4rem;
+  font-weight: 200;
+  letter-spacing: 0.006em;
+  margin-bottom: 0.2rem;
+}
+.four-cards-header__title2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.006em;
+  margin-bottom: 1.6rem;
+}
+.four-cards-header__description {
+  font-size: 1.5rem;
+  letter-spacing: 0.005em;
+  line-height: 1.667em;
+  opacity: 0.5;
+}
+@media (min-width: 55em) {
+  .four-cards-header {
+    max-width: 54rem;
+    margin: 0 auto 6.3rem;
+  }
+  .four-cards-header__title1 {
+    font-size: 3.6rem;
+    margin-bottom: -0.4rem;
+  }
+  .four-cards-header__title2 {
+    font-size: 3.6rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.four-cards {
+  display: flex;
+  flex-direction: column;
+}
+.four-cards__card {
+  height: 22.2rem;
+  padding: 2.6rem;
+  margin-bottom: 2.4rem;
+  color: var(--very-dark-blue);
+  background-color: white;
+  border-radius: 0.8rem;
+  box-shadow: 0 1.5rem 3rem -1.1rem rgba(131, 166, 210, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+.four-cards__supervisor::before {
+  content: "";
+  width: 100%;
+  height: 0.355rem;
+  background: var(--cyan);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.four-cards__team-builder::before {
+  content: "";
+  width: 100%;
+  height: 0.355rem;
+  background: var(--red);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.four-cards__karma::before {
+  content: "";
+  width: 100%;
+  height: 0.355rem;
+  background: var(--orange);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.four-cards__calculator::before {
+  content: "";
+  width: 100%;
+  height: 0.355rem;
+  background: var(--blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.four-cards__title {
+  font-size: 2rem;
+  margin-left: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+.four-cards__description {
+  font-size: 1.3rem;
+  letter-spacing: 0.006em;
+  line-height: 1.8em;
+  opacity: 0.5;
+  margin-left: 0.3rem;
+}
+.four-cards__icon {
+  width: 5.7rem;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 2.8rem;
+  right: 2.8rem;
+}
+@media (min-width: 55em) {
+  .four-cards {
+    min-height: 53rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+  .four-cards__middle-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .four-cards__supervisor, .four-cards__middle-cards, .four-cards__calculator {
+    flex: 2;
+  }
+  .four-cards__card {
+    max-width: 35rem;
+    height: 25rem;
+    padding: 3.2rem;
+    margin-bottom: 0;
+  }
+  .four-cards__card:first-child::before, .four-cards__card:nth-child(2)::before, .four-cards__card:nth-child(3)::before, .four-cards__card:nth-child(4)::before {
+    height: 0.4rem;
+  }
+  .four-cards__title {
+    margin-top: -0.1rem;
+    margin-left: 0;
+    margin-bottom: 0.8rem;
+  }
+  .four-cards__description {
+    margin-left: 0;
+  }
+  .four-cards__icon {
+    width: 6.4rem;
+    bottom: 3.2rem;
+    right: 3.2rem;
+  }
+}
+
+.attribution {
+  bottom: 1em;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--very-dark-blue);
+  text-align: center;
+  opacity: 0.6;
+}
+.attribution a {
+  transition: 0.12s;
+  color: var(--very-dark-blue);
+}
+.attribution a:hover {
+  color: black;
+}
+.attribution a:active {
+  color: gray;
+}
+@media (min-width: 55em) {
+  .attribution {
+    position: fixed;
+  }
+}/*# sourceMappingURL=style.css.map */

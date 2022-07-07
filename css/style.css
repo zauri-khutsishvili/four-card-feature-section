@@ -186,10 +186,11 @@ body {
   .four-cards__title {
     margin-top: -0.1rem;
     margin-left: 0;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.9rem;
   }
   .four-cards__description {
     margin-left: 0;
+    line-height: 1.7em;
   }
   .four-cards__icon {
     width: 6.4rem;

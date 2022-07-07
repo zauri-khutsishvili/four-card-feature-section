@@ -47,7 +47,7 @@ body {
 }
 @media (min-width: 55em) {
   .four-card-feature-section-container {
-    margin-top: -0.1rem;
+    margin-top: 1rem;
   }
 }
 

@@ -28,12 +28,12 @@ a {
 }
 
 body {
-  margin: 8.4rem 8.5333333333% 5.4rem;
+  margin: 8.4rem 3.2rem 5.4rem;
   background-color: var(--very-light-gray);
 }
-@media (min-width: 55em) {
+@media (min-width: 72.5em) {
   body {
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 3rem;
     display: flex;
     justify-content: center;
@@ -43,30 +43,33 @@ body {
 
 .four-card-feature-section-container {
   max-width: 111rem;
+  margin-bottom: 2.4rem;
   font-family: "Poppins", sans-serif;
 }
-@media (min-width: 55em) {
+@media (min-width: 72.5em) {
   .four-card-feature-section-container {
     margin-top: 2rem;
+    margin-bottom: 0;
   }
 }
 
 .four-cards-header {
   text-align: center;
+  max-width: 54rem;
   color: var(--very-dark-blue);
-  margin-bottom: 7.5rem;
+  margin: 0 auto 7.5rem;
 }
-.four-cards-header__title1 {
+.four-cards-header__title {
   font-size: 2.4rem;
   font-weight: 200;
   letter-spacing: 0.006em;
-  margin-bottom: 0.2rem;
-}
-.four-cards-header__title2 {
-  font-size: 2.4rem;
-  font-weight: 600;
-  letter-spacing: 0.006em;
   margin-bottom: 1.6rem;
+}
+.four-cards-header__title span {
+  display: block;
+  font-weight: 600;
+  margin-top: 0.2rem;
+  letter-spacing: 0.006em;
 }
 .four-cards-header__description {
   font-size: 1.5rem;
@@ -74,29 +77,32 @@ body {
   line-height: 1.667em;
   opacity: 0.5;
 }
-@media (min-width: 55em) {
+@media (min-width: 72.5em) {
   .four-cards-header {
-    max-width: 54rem;
     margin: 0 auto 6.3rem;
   }
-  .four-cards-header__title1 {
+  .four-cards-header__title {
     font-size: 3.6rem;
-    margin-bottom: -0.4rem;
+    margin-bottom: 1.5rem;
   }
-  .four-cards-header__title2 {
+  .four-cards-header__title span {
     font-size: 3.6rem;
+    margin-top: -0.4rem;
     margin-bottom: 1.5rem;
   }
 }
 
 .four-cards {
+  margin: auto;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.4rem;
 }
 .four-cards__card {
   height: 22.2rem;
+  max-width: 35rem;
   padding: 2.6rem;
-  margin-bottom: 2.4rem;
   color: var(--very-dark-blue);
   background-color: white;
   border-radius: 0.8rem;
@@ -159,26 +165,38 @@ body {
   bottom: 2.8rem;
   right: 2.8rem;
 }
-@media (min-width: 55em) {
+@media (min-width: 72.5em) {
   .four-cards {
+    width: 111rem;
+    max-width: none;
     min-height: 53rem;
-    flex-direction: row;
-    align-items: center;
-    gap: 3rem;
-  }
-  .four-cards__middle-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
-  .four-cards__supervisor, .four-cards__middle-cards, .four-cards__calculator {
-    flex: 2;
+    position: relative;
   }
   .four-cards__card {
     max-width: 35rem;
     height: 25rem;
     padding: 3.2rem;
     margin-bottom: 0;
+  }
+  .four-cards__card:first-child {
+    position: absolute;
+    left: 0;
+    top: 26.4150943396%;
+  }
+  .four-cards__card:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 34.2342342342%;
+  }
+  .four-cards__card:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 34.2342342342%;
+  }
+  .four-cards__card:nth-child(4) {
+    position: absolute;
+    right: 0;
+    top: 26.4150943396%;
   }
   .four-cards__card:first-child::before, .four-cards__card:nth-child(2)::before, .four-cards__card:nth-child(3)::before, .four-cards__card:nth-child(4)::before {
     height: 0.4rem;
@@ -217,7 +235,7 @@ body {
 .attribution a:active {
   color: gray;
 }
-@media (min-width: 55em) {
+@media (min-width: 72.5em) {
   .attribution {
     position: fixed;
   }

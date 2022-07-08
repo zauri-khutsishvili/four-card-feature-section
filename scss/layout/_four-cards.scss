@@ -1,13 +1,16 @@
 @use '../abstracts' as a;
 
 .four-cards {
+    margin: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.4rem;
 
     &__card {
         height: 22.2rem;
+        max-width: 35rem;
         padding: 2.6rem;
-        margin-bottom: 2.4rem;
         color: var(--very-dark-blue);
         background-color: white;
         border-radius: .8rem;
@@ -79,28 +82,40 @@
     }
 
     @include a.breakpoint(desktop) {
+        width: 111rem;
+        max-width: none;
         min-height: 53rem;
-        flex-direction: row;
-        align-items: center;
-        gap: 3rem;
-
-        &__middle-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-        }
-
-        &__supervisor,
-        &__middle-cards,
-        &__calculator {
-            flex: 2;
-        }
+        position: relative;
 
         &__card {
             max-width: 35rem;
             height: 25rem;
             padding: 3.2rem;
             margin-bottom: 0;
+
+            &:first-child {
+                position: absolute;
+                left: 0;
+                top: calc(14 / 53 * 100%);
+            }
+
+            &:nth-child(2) {
+                position: absolute;
+                top: 0;
+                left: calc(38 / 111 * 100%);
+            }
+
+            &:nth-child(3) {
+                position: absolute;
+                bottom: 0;
+                left: calc(38 / 111 * 100%);
+            }
+
+            &:nth-child(4) {
+                position: absolute;
+                right: 0;
+                top: calc(14 / 53 * 100%);
+            }
 
             &:first-child::before,
             &:nth-child(2)::before,

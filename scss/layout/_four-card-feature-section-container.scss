@@ -3,12 +3,13 @@
 body {
     margin: 8.4rem 3.2rem 5.4rem;
     background-color: var(--very-light-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @include a.breakpoint(desktop) {
             min-height: 100vh;
             margin: 0 3rem;
-            display: flex;
-            justify-content: center;
             align-items: center;
     }
 }
@@ -17,9 +18,11 @@ body {
     max-width: 111rem;
     margin-bottom: 2.4rem;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @include a.breakpoint(desktop) {
-        margin-top: 2rem;
-        margin-bottom: 0;
+        margin-top: 7.8rem;
     }
 }

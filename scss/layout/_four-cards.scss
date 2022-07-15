@@ -2,9 +2,7 @@
 
 .four-cards {
     margin: auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
     gap: 2.4rem;
 
     &__card {
@@ -81,40 +79,41 @@
         right: 2.8rem;
     }
 
+    @include a.breakpoint(tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+
     @include a.breakpoint(desktop) {
-        width: 111rem;
-        max-width: none;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 3rem;
+        max-width: 111rem;
         min-height: 53rem;
-        position: relative;
 
         &__card {
             max-width: 35rem;
-            height: 25rem;
+            min-height: 25rem;
             padding: 3.2rem;
             margin-bottom: 0;
 
             &:first-child {
-                position: absolute;
-                left: 0;
-                top: calc(14 / 53 * 100%);
+                grid-column: 1;
+                grid-row: 2 / span 2;
             }
 
             &:nth-child(2) {
-                position: absolute;
-                top: 0;
-                left: calc(38 / 111 * 100%);
+                grid-column: 2;
+                grid-row: 1 / span 2;
             }
 
             &:nth-child(3) {
-                position: absolute;
-                bottom: 0;
-                left: calc(38 / 111 * 100%);
+                grid-column: 2;
+                grid-row: 3 / span 2;
             }
 
             &:nth-child(4) {
-                position: absolute;
-                right: 0;
-                top: calc(14 / 53 * 100%);
+                grid-column: 3;
+                grid-row: 2 / span 2;
             }
 
             &:first-child::before,

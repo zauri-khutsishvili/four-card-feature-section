@@ -27,17 +27,27 @@
         opacity: .5;
     }
 
-    @include a.breakpoint(desktop) {
+    @include a.breakpoint(tablet) {
         margin: 0 auto 6.3rem;
 
         &__title {
-            font-size: 3.6rem;
+            font-size: 3rem;
             margin-bottom: 1.5rem;
 
             span {
-                font-size: 3.6rem;
+                font-size: 3rem;
                 margin-top: -0.4rem;
                 margin-bottom: 1.5rem;
+            }
+        }
+
+        @include a.breakpoint(desktop) {    
+            &__title {
+                font-size: 3.6rem;
+    
+                span {
+                    font-size: 3.6rem;
+                }
             }
         }
     }

@@ -30,13 +30,14 @@ a {
 body {
   margin: 8.4rem 3.2rem 5.4rem;
   background-color: var(--very-light-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-@media (min-width: 72.5em) {
+@media (min-width: 58em) {
   body {
     min-height: 100vh;
     margin: 0 3rem;
-    display: flex;
-    justify-content: center;
     align-items: center;
   }
 }
@@ -45,11 +46,13 @@ body {
   max-width: 111rem;
   margin-bottom: 2.4rem;
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-@media (min-width: 72.5em) {
+@media (min-width: 58em) {
   .four-card-feature-section-container {
-    margin-top: 2rem;
-    margin-bottom: 0;
+    margin-top: 7.8rem;
   }
 }
 
@@ -77,26 +80,32 @@ body {
   line-height: 1.667em;
   opacity: 0.5;
 }
-@media (min-width: 72.5em) {
+@media (min-width: 35em) {
   .four-cards-header {
     margin: 0 auto 6.3rem;
   }
   .four-cards-header__title {
-    font-size: 3.6rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
   }
   .four-cards-header__title span {
-    font-size: 3.6rem;
+    font-size: 3rem;
     margin-top: -0.4rem;
     margin-bottom: 1.5rem;
+  }
+}
+@media (min-width: 35em) and (min-width: 58em) {
+  .four-cards-header__title {
+    font-size: 3.6rem;
+  }
+  .four-cards-header__title span {
+    font-size: 3.6rem;
   }
 }
 
 .four-cards {
   margin: auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
   gap: 2.4rem;
 }
 .four-cards__card {
@@ -165,38 +174,40 @@ body {
   bottom: 2.8rem;
   right: 2.8rem;
 }
-@media (min-width: 72.5em) {
+@media (min-width: 35em) {
   .four-cards {
-    width: 111rem;
-    max-width: none;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 58em) {
+  .four-cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3rem;
+    max-width: 111rem;
     min-height: 53rem;
-    position: relative;
   }
   .four-cards__card {
     max-width: 35rem;
-    height: 25rem;
+    min-height: 25rem;
     padding: 3.2rem;
     margin-bottom: 0;
   }
   .four-cards__card:first-child {
-    position: absolute;
-    left: 0;
-    top: 26.4150943396%;
+    grid-column: 1;
+    grid-row: 2/span 2;
   }
   .four-cards__card:nth-child(2) {
-    position: absolute;
-    top: 0;
-    left: 34.2342342342%;
+    grid-column: 2;
+    grid-row: 1/span 2;
   }
   .four-cards__card:nth-child(3) {
-    position: absolute;
-    bottom: 0;
-    left: 34.2342342342%;
+    grid-column: 2;
+    grid-row: 3/span 2;
   }
   .four-cards__card:nth-child(4) {
-    position: absolute;
-    right: 0;
-    top: 26.4150943396%;
+    grid-column: 3;
+    grid-row: 2/span 2;
   }
   .four-cards__card:first-child::before, .four-cards__card:nth-child(2)::before, .four-cards__card:nth-child(3)::before, .four-cards__card:nth-child(4)::before {
     height: 0.4rem;
@@ -218,7 +229,6 @@ body {
 }
 
 .attribution {
-  bottom: 1em;
   font-size: 1.1rem;
   font-family: "Poppins", sans-serif;
   color: var(--very-dark-blue);
@@ -234,9 +244,4 @@ body {
 }
 .attribution a:active {
   color: gray;
-}
-@media (min-width: 72.5em) {
-  .attribution {
-    position: fixed;
-  }
 }/*# sourceMappingURL=style.css.map */

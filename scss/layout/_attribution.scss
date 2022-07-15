@@ -1,7 +1,6 @@
 @use '../abstracts' as a;
 
 .attribution {
-    bottom: 1em;
     font-size: 1.1rem;
     font-family: 'Poppins', sans-serif;
     color: var(--very-dark-blue);
@@ -11,17 +10,13 @@
     a {
         transition: .12s;
         color: var(--very-dark-blue);
-    }
-    
-    a:hover {
-        color: black;
-    }
-    
-    a:active {
-        color: gray;
-    }
 
-    @include a.breakpoint(desktop) {
-        position: fixed;
+        &:hover {
+            color: black;
+        }
+        
+        &:active {
+            color: gray;
+        }
     }
 }

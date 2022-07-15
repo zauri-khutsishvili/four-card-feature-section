@@ -23,6 +23,6 @@ body {
     justify-content: center;
 
     @include a.breakpoint(desktop) {
-        margin-top: 7.8rem;
+        margin-top: 7.5rem;
     }
 }
